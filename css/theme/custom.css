@@ -1,0 +1,55 @@
+section h4{
+  margin-bottom:15px;
+}
+section ul li{
+  list-style:url(../../img/icon-shuriken.png)
+}
+.left{
+  float:left;
+  width: 300px;
+}
+.reveal p{
+  margin-bottom:30px;
+  text-align:left;
+  font-size:0.8em;
+}
+div.cover {
+  padding-top:25%;
+}
+div.centered {
+  height:100%;
+  min-height:600px;
+  vertical-align:middle;
+}
+.content h3,
+.content h4,
+.content h5{
+  text-align:left;
+}
+div.me {
+  text-align:center;
+  padding-top:90px;
+}
+div.me p{
+  font-size:40px;
+  text-align:center;
+}
+div.me .pic{
+  width:250px;
+  height:250px;
+}
+div.sum {
+  margin:160px 0 0 160px;
+}
+div.sum p {
+  font-size: 40px;
+}
+div.drush{
+  margin-top:70px;
+}
+div.drush-video{
+  margin-top: 60px;
+}
+div.drush-video p{
+  text-align:center;
+}

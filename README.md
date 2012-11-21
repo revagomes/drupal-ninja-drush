@@ -1,0 +1,1 @@
+Nesta apresentação você irá aprender os princípios básicos do Drush e como utilizá-lo para otimizar o desenvolvimento com Drupal. Serão abordados desde os ninjutsus mais básicos como sua instalação e utilização dos comandos do dia-a-dia até as artes milenares avançadas de instalação de sites, backups, gerenciamento de múltiplos sites, etc sem sequer abrir o navegador.
