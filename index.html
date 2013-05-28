@@ -1,222 +1,696 @@
-<!doctype html>
-<html lang="en">
+<html lang="pt-br">
+  <head>
+    <title>A ARTE MILENAR DO DRUSH RUMO A SE TORNAR UM DRUPAL NINJA. | Drupalcamp SP 2013</title>
+    <meta name="description" content="Esta apresentação você irá apresentar a filosofia do Drush e como utilizá-lo para otimizar seu tempo e voar no desenvolvimento com Drupal. Serão abordados desde os ninjutsus mais básicos até as artes milenares avançadas. Neste caminho rumo a se tornar um mestre ninja na arte do Drush você verá desde sua instalção e os comandos do dia-a-dia até as técnicas de instalação de sites com apenas um comando, backups, gerenciamento de múltiplos sites, etc." />
+    <meta name="author" content="Remato Vasconcellos Gomes - revagomes.com.br" />
 
-	<head>
-		<meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/themes/github.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
 
-		<title>Drush - A principal arma para se tornar um Drupal Ninja</title>
+    <!-- Vamo que vamo! -->
+    <div id="impress" data-transition-duration="2000">
 
-		<meta name="description" content="Drush - A principal arma para se tornar um Drupal Ninja">
-		<meta name="author" content="Renato Vasconcellos Gomes">
+      <article id="start" class="step slide" data-x="-3000" data-y="-1500">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <h1>Drupal Camp #São Paulo 2013</h1>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-
-				<section>
-						<div class="cover">
-							<h1>drush</h1>
-						</div>
-				</section>
-
-				<section>
-					<h3 style="font-size: 1.35em;">A principal arma para se tornar um</h3>
-					<h1>Drupal ninja</h1>
-					<img src="http://i.imgur.com/L6UBj.png" style="border: none;background: none;box-shadow:none">
-				</section>
-
-				<section>
-        <div class="me">
-			  	<img src="img/Ll3A0.jpg" class="pic">
-          <p>
-            @revagomes<br>
-            about.me/revagomes
-          </p>
+        <div class="content center">
+          <img class="drupalcapsp-logo" src="images/dcamplogo.png" />
         </div>
-				</section>
 
-				<section>
-					<img src="img/kPrCq.png" style="border: none;background: none;box-shadow:none;" />
-					<blockquote style="width: 410px;">Somos uma agência digital<br>especializada em design e<br>tecnologias de Internet.</blockquote>
-				</section>
+      </article>
 
-				<section>
-				  <iframe src="http://player.vimeo.com/video/8840401?badge=0" height="600" width="800">&amp;amp;amp;amp;nbsp;&amp;amp;nbsp;&amp;nbsp;</iframe>
-				</section>
+      <article id="titulo" class="step slide" data-x="-2000" data-y="-1500" data-rotate="180">
+        <h1 class="big">A arte milenar do Drush rumo a se tornar um Drupal ninja.</h1>
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
 
-				<section>
-					<h2>Mas que %@#! é Drush?</h2>
-					<div class="centered">
-					  <div class="left sum">
-						  <p>Drupal + Shell =</p>
-					  </div>
-					  <div class="left drush">
-						  <img src="img/VdQbU.png" style="border: none;background: none;box-shadow:none">
-					  </div>
-          </div>
-				</section>
+      <article id="about" class="step slide" data-x="0" data-y="-1500">
+        <h1>Quem é esse mala?</h1>
 
-				<section>
-					<h2>Como assim?</h2>
-					<div class="drush-video">
-					<p>Drush: More Beer, Less Effort</p>
-  				<br>
-          <iframe src="http://player.vimeo.com/video/5207683?badge=0" height="226" width="600">&amp;amp;amp;amp;#10;</iframe>
+        <div class="content">
+          <ul class="smallish">
+            <li>Técnico em Informática</li>
+            <li>Publicitário</li>
+            <li>(Ex) Web Designer - WTF!</li>
+            <li>Desenvolvedor Web</li>
+            <li>Vegetariano</li>
+            <li>Chato pra KCT</li>
+            <li>Drupaleiro! \o/</li>
+          </ul>
         </div>
-				</section>
 
-				<section>
-          <div class="centered">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-						<h2>Mas só funciona no linux?<br>:-(</h2>
-					</div>
-				</section>
+        <img id="pic" src="images/revagomes.jpg" />
 
-				<section>
-					<div style="centered">
-            <br>
-            <br>
-            <br>
-            <h3>Não!</h3>
-						<h2>Funciona em todos os Sistemas operacionais!<br>\o/</h2>
-					</div>
-				</section>
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
 
-				<section>
-					<h2>Taijutsu</h2>
-          <div class="content">
-					  <h4>download (dl)</h4>
-					  <p>Baixa o core do Drupal e projetos contribuídos.</p>
-					  <h4>enable (en)</h4>
-					  <p>Ativa um ou mais módulos.</p>
-					  <h4>disable (dis)</h4>
-					  <p>Desativa um ou mais módulos.</p>
+      <article id="social" class="step slide" data-x="1000" data-y="-1500">
+        <h1>Quer ser meu amigo?</h1>
+
+        <div class="content">
+          <div class="center">
+            <ul>
+              <li class="twitter">@revagomes</li>
+              <li class="aboutme">about.me/revagomes</li>
+            </ul>
           </div>
-				</section>
+        </div>
 
-        <section>
-          <h2>Taijutsu</h2>
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="what" class="step slide" data-x="2000" data-y="-1500">
+        <h1 class="extra">Drush?!</h1>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="what-2" class="step slide" data-x="2000" data-y="-2500">
+        <h1 class="big">WTF?</h1>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="sum" class="step slide" data-x="-1000" data-y="0" data-rotate="90">
+        <div class="content">
+          <h1>Drush</h1>
           <div class="content">
-					  <h4>cache clear (cc)</h4>
-					  <p>Limpa todos os caches. </p>
-            <h4>uninstall (pm-uninstall)</h4>
-            <p>Desinstala um ou mais módulos.</p>
-            <h4>update (up)</h4>
-					  <p>Atualiza o código do projeto e aplica as atualizações de BD caso sejam necessárias (update.php)<br>
+            <h2>Drupal + Shell</h2>
+            <img class="center drush-icon" src="images/drush_icon.png">
           </div>
-        </section>
-				
-        <section>
-					<h2>Taijutsu</h2>
-					<div class="content">
-            <h4>status (st)</h4>
-            <p>Lista informações básicas a respeito da instalação do Drupal.</p>
-			      <h4>updatecode (upc)</h4>
-			      <p>Atualiza apenas o código do projeto. Move os arquivos antigos para o diretório de BKP</p>
-					  <h4>updatedb (updb)</h4>
-					  <p>Executa o processo de update.php vi linha de comando.</p>
-					</div>
-				</section>
+        </div>
 
-				<section>
-					<h2>Kenjutsu</h2>
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+
+      <article id="linux" class="step slide" data-x="-1000" data-y="1000">
+        <div class="content">
+          <h1>Mas só funciona no linux?</h1>
+          <div class="center middle">
+            <p class="extra">:-(</p>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="cross" class="step slide" data-x="-2000" data-y="1000">
+        <div class="content">
+          <h1 class="big">Não!</h1>
+          </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="real-world" class="step slide" data-x="-3000" data-y="1000">
+        <h1>Como assim?</h1>
+        <div class="content center">
+            <div class="drush-video">
+              <p>Drush: More Beer, Less Effort</p>
+              <br>
+              <video width="320" height="240" controls>
+                <source src="/home/revagomes/Desktop/drush-video.mp4" type="video/mp4">
+                <!-- <source src="/home/revagomes/Desktop/drush-video.ogg" type="video/ogg"> -->
+              Your browser does not support the video tag.
+              </video>
+              <!-- <iframe src="http://player.vimeo.com/video/5207683?badge=0" height="226" width="600">&amp;amp;amp;amp;#10;</iframe> -->
+            </div>
+        </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+
+      <article id="help" class="step slide" data-x="-4000" data-y="1000">
+        <h1>HELP!!!</h1>
+        <div class="content">
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="help-2" class="step slide" data-x="-4000" data-y="2000">
+        <h1>Drush help</h1>
+        <div class="content">
+          <div class="contetnt middle">
+            <pre><code data-language="shell" class="big">
+              $ drush help
+
+              $ drush help help
+            </code></pre>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="topic" class="step slide" data-x="-5000" data-y="1000">
+        <h1>Drush topic</h1>
+        <div class="content middle">
+
+          <p>README README README [...]</p>
+          <br>
+          <pre><code data-language="shell" class="big">
+          $ drush topic docs-readme
+          </code></pre>
+
+        </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="alias" class="step slide" data-x="-6000" data-y="1000">
+        <h1>Drush aliases</h1>
+        <div class="content">
+          <p class="center">http://github.com/nuvoleweb/drush_alias.git</p>
+
+          <h3>Gerenciar projetos</h3>
+
+          <pre><code data-language="shell" class="big">
+            $ dren / drdis / drun  [project]
+          </code></pre>
+
+          <h3>Desinstalar projetos</h3>
+
+          <pre><code data-language="shell" class="big">
+            $ drun [project]
+          </code></pre>
+
+          <h3>Backups da Base</h3>
+
+          <pre><code data-language="shell" class="big">
+            $ drdu [project]
+          </code></pre>
+        </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="alias-2" class="step slide" data-x="-7000" data-y="1000">
+        <div class="content">
+          <h2>Drush Alias</h2>
+          <div class="center">
+            <p>/usr/share/php/drush/examples</p>
+            <p>example.bashrc</p>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="bashrc" class="step slide code" data-x="-8000" data-y="1000" data-rotate="90">
+        <div class="content">
+          <pre><code data-language="shell">
+          # -*- mode: shell-script; mode: flyspell-prog; ispell-local-dictionary: "american" -*-
+          #
+          # Example bash aliases to improve your drush experience with bash.
+          # Copy this file to your home directory, rename and customize it to
+          # suit, and source it from your ~/.bash_profile file.
+          #
+          # Example - rename this to .drush_bashrc, and in your
+          # ~/.bash_profile add:
+          #
+          #
+          #    if [ -f ~/.drush_bashrc ] ; then
+          #        . ~/.drush_bashrc
+          #    fi
+          #
+          # Features:
+          #
+          # Finds and sources drush.complete.sh from your drush directory,
+          # enabling autocompletion for drush commands.
+          #
+          # Creates aliases to common drush commands that work in a global context:
+          #
+          #       dr               - drush
+          #       ddd              - drush drupal-directory
+          #       dl               - drush pm-download
+          #       ev               - drush php-eval
+          #       sa               - drush site-alias
+          #       sa               - drush site-alias --local (show local site aliases)
+          #       st               - drush core-status
+          #       use              - drush site-set
+          #
+          # Aliases for drush commands that work on the current drupal site:
+          #
+          #       cc               - drush cache-clear
+          #       cca              - drush cache-clear all
+          #       dis              - drush pm-disable
+          #       en               - drush pm-enable
+          #       i                - drush pm-info
+          #       pml              - drush pm-list
+          #       rf               - drush pm-refresh
+          #       unin             - drush pm-uninstall
+          #       up               - drush pm-update
+          #       upc              - drush pm-updatecode
+          #       updb             - drush updatedb
+          #       q                - drush sql-query
+          #
+          # Provides several common shell commands to work better with drush:
+          #
+          #       ddd @dev         - print the path to the root directory of @dev
+          #       cdd @dev         - change the current working directory to @dev
+          #       lsd @dev         - ls root folder of @dev
+          #       lsd %files       - ls "files" directory of current site
+          #       lsd @dev:%devel  - ls devel module directory in @dev
+          #       @dev st          - drush @dev core-status
+          #       dssh @live       - ssh to the remote server @live points at
+          #       gitd @live pull  - run `git pull` on the drupal root of @live
+          #
+          # Drush site alias expansion is also done for the cpd command:
+          #
+          #       cpd -R @site1:%files @site2:%files
+          #
+          # Note that the 'cpd' alias only works for local sites.  Use
+          # `drush rsync` or gitd` to move files between remote sites.
+          #
+          # By default, aliases are also created for the following standard
+          # commands:
+          #
+          #       cd                - cddl [*]
+          #       ls                - lsd
+          #       cp                - cpd
+          #       ssh               - dssh
+          #       git               - gitd
+          #
+          # These standard commands behave exactly the same as they always
+          # do, unless a drush site specification such as @dev or @live:%files
+          # is used in one of the arguments.  If you do not want to override
+          # these standard commands, they may be easily removed or commented out
+          # in your copy of this file.
+
+          # Aliases for common drush commands that work in a global context.
+          alias dr='drush'
+          alias ddd='drush drupal-directory'
+          alias dl='drush pm-download'
+          alias ev='drush php-eval'
+          alias sa='drush site-alias'
+          alias lsa='drush site-alias --local'
+          alias st='drush core-status'
+          alias use='drush site-set'
+
+          # Aliases for drush commands that work on the current drupal site
+          alias cc='drush cache-clear'
+          alias cca='drush cache-clear all'
+          alias dis='drush pm-disable'
+          alias en='drush pm-enable'
+          alias pmi='drush pm-info'
+          alias pml='drush pm-list'
+          alias rf='drush pm-refresh'
+          alias unin='drush pm-uninstall'
+          alias up='drush pm-update'
+          alias upc='drush pm-updatecode'
+          alias updb='drush updatedb'
+          alias q='drush sql-query'
+
+          # Overrides for standard shell commands. Uncomment to enable.  Alias
+          # cd='cdd' if you want to be able to use cd @remote to ssh to a
+          # remote site.
+
+          # alias cd='cddl'
+          # alias ls='lsd'
+          # alias cp='cpd'
+          # alias ssh='dssh'
+          # alias git='gitd'
+
+          # Find the drush executable and test it.
+          d=$(which drush)
+          # If no program is found try an alias.
+          if [ -z "$d" ]; then
+            d=$(alias drush | cut -f 2 -d '=' | sed "s/'//g")
+          fi
+          # Test that drush is an executable.
+          [ -x "$d" ] || exit 0
+
+          # If the file found is a symlink, resolve to the actual file.
+          if [ -h "$d" ] ; then
+            # Change `readlink` to `readlink -f` if your drush is a symlink to a symlink. -f is unavailable on OSX's readlink.
+            d=$(readlink $d)
+          fi
+
+          # Get the directory that drush is stored in.
+          d="${d%/*}"
+          # If we have found drush.complete.sh, then source it.
+          if [ -f "$d/drush.complete.sh" ] ; then
+            . "$d/drush.complete.sh"
+          fi
+
+          # Create an alias for every drush site alias.  This allows
+          # for commands such as `@live pml` to run `drush @live pm-list`
+          for a in $(drush sa); do
+            alias $a="drush $a"
+            ## Register another completion function for every alias to drush.
+            if [ -n "`type _drush_completion 2>/dev/null`" ] ; then
+              complete -o nospace -F _drush_completion $a > /dev/null
+            fi
+          done
+
+          # We extend the cd command to allow convenient
+          # shorthand notations, such as:
+          #   cd @site1
+          #   cd %modules
+          #   cd %devel
+          #   cd @site2:%files
+          # You must use 'cddl' instead of 'cd' if you are not using
+          # the optional 'cd' alias from above.
+          # This is the "local-only" version of the function;
+          # see the cdd function, below, for an expanded implementation
+          # that will ssh to the remote server when a remote site
+          # specification is used.
+          function cddl() {
+            s="$1"
+            if [ -z "$s" ]
+            then
+              builtin cd
+            elif [ "${s:0:1}" == "@" ] || [ "${s:0:1}" == "%" ]
+            then
+              d="$(drush drupal-directory $1 --local 2>/dev/null)"
+              if [ $? == 0 ]
+              then
+                echo "cd $d";
+                builtin cd "$d";
+              else
+                echo "Cannot cd to remote site $s"
+              fi
+            else
+              builtin cd "$s";
+            fi
+          }
+
+          # Works just like the `cd` shell alias above, with one additional
+          # feature: `cdd @remote-site` works like `ssh @remote-site`,
+          # whereas cd above will fail unless the site alias is local.  If
+          # you prefer the `ssh` behavior, you can rename this shell alias
+          # to `cd`.
+          function cdd() {
+            s="$1"
+            if [ -z "$s" ]
+            then
+              builtin cd
+            elif [ "${s:0:1}" == "@" ] || [ "${s:0:1}" == "%" ]
+            then
+              d="$(drush drupal-directory $s 2>/dev/null)"
+              $(drush sa ${s%%:*} --component=remote-host > /dev/null 2>&1)
+              if [ $? != 0 ]
+              then
+                echo "cd $d"
+                builtin cd "$d"
+              else
+                if [ -n "$d" ]
+                then
+                  c="cd \"$d\" \; bash"
+                  drush -s ${s%%:*} ssh --tty --escaped "$c"
+                  drush ${s%%:*} ssh --tty --escaped "$c"
+                else
+                  drush ssh ${s%%:*}
+                fi
+              fi
+            else
+              builtin cd "$s"
+            fi
+          }
+
+          # Allow `git @site gitcommand` as a shortcut for `cd @site; git gitcommand`.
+          # Also works on remote sites, though.
+          function gitd() {
+            s="$1"
+            if [ -n "$s" ] && [ ${s:0:1} == "@" ] || [ ${s:0:1} == "%" ]
+            then
+              d="$(drush drupal-directory $s 2>/dev/null)"
+              $(drush sa ${s%%:*} --component=remote-host > /dev/null 2>&1)
+              if [ $? == 0 ]
+              then
+                dssh ${s%%:*} cd "$d" \; git "${@:2}"
+              else
+                echo cd "$d" \; git "${@:2}"
+                (
+                  cd "$d"
+                  "git" "${@:2}"
+                )
+              fi
+            else
+              "git" "$@"
+            fi
+          }
+
+          # Get a directory listing on @site or @site:%files, etc, for local or remote sites.
+          function lsd() {
+            p=()
+            r=
+            for a in "$@" ; do
+              if [ ${a:0:1} == "@" ] || [ ${a:0:1} == "%" ]
+              then
+                p[${#p[@]}]="$(drush drupal-directory $a 2>/dev/null)"
+                if [ ${a:0:1} == "@" ]
+                then
+                  $(drush sa ${a%:*} --component=remote-host > /dev/null 2>&1)
+                  if [ $? == 0 ]
+                  then
+                    r=${a%:*}
+                  fi
+                fi
+              elif [ -n "$a" ]
+              then
+                p[${#p[@]}]="$a"
+              fi
+            done
+            if [ -n "$r" ]
+            then
+              ssh $r ls "${p[@]}"
+            else
+              "ls" "${p[@]}"
+            fi
+          }
+
+          # Copy files from or to @site or @site:%files, etc; local sites only.
+          function cpd() {
+            p=()
+            for a in "$@" ; do
+              if [ ${a:0:1} == "@" ] || [ ${a:0:1} == "%" ]
+              then
+                p[${#p[@]}]="$(drush drupal-directory $a --local 2>/dev/null)"
+              elif [ -n "$a" ]
+              then
+                p[${#p[@]}]="$a"
+              fi
+            done
+            "cp" "${p[@]}"
+          }
+
+          # This alias allows `dssh @site` to work like `drush @site ssh`.
+          # Ssh commands, such as `dssh @site ls /tmp`, are also supported.
+          function dssh() {
+            d="$1"
+            if [ ${d:0:1} == "@" ]
+            then
+              drush "$d" ssh "${@:2}"
+            else
+              "ssh" "$@"
+            fi
+          }
+          </code></pre>
+        </div>
+      </article>
+
+      <article id="keep-calm" class="step slide" data-x="-1500" data-y="3000" data-rotate="-90">
+        <div class="content">
+          <h1>Keep Calm and [...]</h1>
+          <div class="content middle">
+            <pre><code data-language="shell" class="big">
+              $ drush cc all
+            </code></pre>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="hands-on" class="step slide" data-x="-500" data-y="3000">
+        <h1>Mão na massa!</h1>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+
+      <article id="extra" class="step slide" data-x="-500" data-y="4000" data-rotate="180">
+        <h1>Comandos Extra</h1>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="extra-2" class="step slide" data-x="500" data-y="3000">
+        <div class="content">
+          <h1>Comandos Extra</h1>
           <div class="content">
-					  <h4>variable get (vget)</h4>
-  				  <p>Retorna uma lista de uma ou todas as variáveis do site com seus respectivos valores.</p>
-					  <h4>variable set (vset)</h4>
-					  <p>Atribui valor a uma variável.</p>
-					  <h4>variable delete (vdel)</h4>
-					  <p>Deleta uma variável.</p>
-          </div>
-				</section>
-
-				<section>
-					<h2>Choho</h2>
-          <div class="content">
-					  <h4>watchdog delete (wd)</h4>
-					  <p>Deleta todas as Mensagens ou apenas as de um determinado tipo especificado.</p>
-					  <h4>watchdog show (ws)</h4>
-					  <p>Apresenta a mensagens de log do watchdog mais recentes. Permite o filtro por tipo da mensagem.</p>
-          </div>
-				</section>
-
-				<section>
-					<h2>Shurikenjutsu</h2>
-          <div class="content">
-					  <h4>sql-cli (sqlc)</h4>
-					  <p>Abre uma interface SQL em linha de comando usando as credenciais do configuradas no settings.php do Drupal.</p>
-					  <h4>sql-query (sqlq)</h4>
-					  <p>Executa uma query no banco de dados.</p>
-          </div>
-				</section>
-
-        <section>
-          <div class="centered">
             <br>
+            <p>http://drupal.org/project/features</p>
+            <pre><code data-language="shell" class="mid">
+              All commands in features: (features)
+              features-add (fa)         Add a component to a feature module. (DEPRECATED: use features-export)
+              features-components (fc)  List features components.
+              features-diff (fd)        Show the difference between the default and overridden state of a feature.
+              features-export (fe)      Export a feature from your site into a module.
+              features-list (fl, features)  List all the available features for your site.
+              features-revert (fr)      Revert a feature module on your site.
+              features-revert-all       Revert all enabled feature module on your site.
+              (fr-all, fra)
+              features-update (fu)      Update a feature module on your site.
+              features-update-all       Update all feature modules on your site.
+              (fu-all, fua)
+            </code></pre>
+          </div>
+
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <article id="extra-3" class="step slide" data-x="1500" data-y="3000">
+        <div class="content">
+          <h1>Comandos Extra</h1>
+          <div class="content">
             <br>
-            <br>
-            <h2>Mas essa palestra não era sobre linha de comando?<br><br>Cadê a tela preta?!<br>¬¬</h2>
-					</div>
-				</section>
+            <div class="center">
+              <p>http://drupal.org/project/module_builder</p>
+              <p>~/.drush/modules/</p>
+            </div>
+            <pre><code data-language="shell" class="mid">
+              All commands in module_builder: (module_builder)
+              mb-analyze (mban)         List the hooks found in a given module.
+              mb-build (mb)             Generate the code for a new Drupal module, including file headers and hook implementations.
+              mb-debug                  Debug module builder. Does whatever was needed at the time.
+              mb-dir                    Print the location of the module builder data directory.
+              mb-dochooks               Adds comment headers to hooks that need them in the given module.
+              mb-docparams              Adds params... WIP!
+              mb-download (mbdl)        Update module_builder hook data.
+              mb-list                   List the hooks module_builder knows about.
+            </code></pre>
+          </div>
+        </div>
 
-			</div>
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
 
-		</div>
+      <article id="kw" class="step slide" data-x="2500" data-y="3000">
+        <h1>Kraftwagen</h1>
+        <div class="center">
+          <p><a href="http://kraftwagen.org/">http://kraftwagen.org/</a></p>
+        </div>
+        <div class="content">
+          <pre><code data-language="shell" class="mid">
+            All commands in kraftwagen: (kraftwagen)
+            kw-apply-module-dependencies (kw-amd)  Check if all required modules are enabled, enable them if they are not, and disable them if the are enabled, but not required.
+            kw-build (kw-b)             Create a build from the source
+            kw-import-translations (kw-it)   Import all .po files in the project for enabled components.
+            kw-init-database (kw-id)       Initialize (or re-initialize) the database for a Kraftwagen build.
+            kw-new-project (kw-np)      Create a new project. This will create an new source directory from a Git skeleton repository.
+            kw-setup (kw-s)             Sets up the environment, settings files and uploaded files directory for a Kraftwagen project.
+            kw-update (kw-u)          Update a Kraftwagen project. Runs all commands necessary to bring the database in sync with code in the build.
+            kw-update-makefile (kw-um)    Update an existing makefile to the newest version of contributed modules. This will NOT do any major updates.
+          </code></pre>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        </div>
 
-		<script>
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+      <article id="hands-on-2" class="step slide" data-x="3500" data-y="3000">
+        <div class="content">
+          <h1>Mão na massa!<h1>
+        </div>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+      <article id="tks" class="step slide" data-x="0" data-y="0" data-rotate="270">
+        <div class="content">
+          <h1>Valeu!</h1>
 
-		</script>
+        </div>
 
-	</body>
+        <footer>
+          <div class="footer-msg"><span class="brand-txt">revagomes.com.br</span></div>
+        </footer>
+      </article>
+
+      <!-- Página final de resumo. -->
+      <article id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+      </article>
+
+    </div>
+
+
+    <!-- Dica de navegação. -->
+    <div class="hint">
+      <p>Use a barra de espaço ou setas para navegar</p>
+    </div>
+
+    <footer>
+      Renato Vasconcellos Gomes - revagomes.com.br
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Dica de navegação diferente para dispositívos móveis.
+      if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Clique nos lados direito ou esquerdo para navegar</p>";
+      }
+
+      // Adiciona rodapé aos slides.
+      // @TODO
+    </script>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+    <script src="js/rainbow-custom.min.js"></script>
+  </body>
 </html>
